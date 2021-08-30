@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
   </properties>
 
   <dependencies>  
@@ -83,11 +84,11 @@
         <?m2e execute onCofiguration?>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${maven.compiler.version}</version>
+          <version>3.6.1</version>
           <configuration>
             <encoding>UFT-8</encoding>
-            <source>${java.version}</source>
-            <target>${java.version}</target>
+            <source>1.8</source>
+            <target>1.8</target>
           </configuration>
         </plugin>
         
