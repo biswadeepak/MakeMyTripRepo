@@ -22,17 +22,14 @@ public class Login extends TestBase{
 	public void user_opens_browser() throws Throwable {
 		TestBase.initialization();
 		 homepage = new HomePage(driver);
-		//System.out.println("Inside Browser");
+		
 	}
 
 	@Then("^Click on Login or Create Account$")
 	public void click_on_Login_or_Create_Account() throws Throwable {
-		//System.out.println("Login Pop up");
-		homepage.LoginPopUp();
-		//System.out.println("Witing for");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//System.out.println("Clicking on Loging btn");
 		
+		homepage.LoginPopUp();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		homepage.loginorCreateAccountBtn();
 		
 		

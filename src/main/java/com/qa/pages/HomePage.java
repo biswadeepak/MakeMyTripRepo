@@ -64,11 +64,8 @@ public class HomePage{
 		catch(Exception e){
 			
 		}
-		//System.out.println("Click on loin link");
-		//System.out.println(loginLink);
+		
 		loginLink.click();
-		//driver.findElement(By.xpath("//li[@data-cy='account']")).click();
-		//System.out.println("Click on loin link ends");
 		
 	}
 	
@@ -113,13 +110,8 @@ public class HomePage{
 	}
 	
 	public void LoginPopUp(){
-		//System.out.println("Elelement defined");
-        //WebElement element = driver.findElement(By.xpath("//div[@id='root']/div/div/div/div/ul/li[3]"));
-        //System.out.println("waiting for 60 secs");
 		
-		//driver.findElement(By.xpath("//div[@data-cy='outsideModal']")).click();
 		popUpElement.click();
-		//System.out.println("Login pop up end");
 	}
 	
 
