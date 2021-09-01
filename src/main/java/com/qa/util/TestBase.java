@@ -6,11 +6,9 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,7 +21,7 @@ public class TestBase {
 	public TestBase(){
 		try{
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("C:\\NewWorkSpace\\TPoint\\MakeMyTripBDDFramework\\src\\main\\java\\com\\"
+			FileInputStream fis = new FileInputStream("src\\main\\java\\com\\"
 					+ "qa\\config\\config.properties");
 			prop.load(fis);
 		}
@@ -42,13 +40,13 @@ public static void initialization(){
 		
 		if(browsername.equals("chrome")){
 			
-			System.setProperty("webdriver.chrome.driver", "//D:\\My Selenium\\Selenium Download\\New Download\\New\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",prop.getProperty("chromeDriver") );
 		    driver = new ChromeDriver();
 		}
 		
 		else if(browsername.equals("FF")){
 			
-			System.setProperty("webdriver.gecko.driver", "D:\\My Selenium\\Selenium Download\\GeckoDriver\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver",prop.getProperty("geckoDriver") );
 		    driver = new ChromeDriver();
 		}
 		

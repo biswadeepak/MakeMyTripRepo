@@ -1,7 +1,5 @@
 package com.qa.stepDefinations;
 
-import java.util.concurrent.TimeUnit;
-
 import com.qa.pages.FlightsPage;
 import com.qa.pages.HomePage;
 import com.qa.util.TestBase;

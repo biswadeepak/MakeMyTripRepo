@@ -2,7 +2,6 @@ package com.qa.pages;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,12 +22,24 @@ public class FlightsPage extends TestBase{
 	}
 	
 	//Page Factory-OR
-		/*@FindBy(xpath = "//span[contains(text(),'From')]")
-		WebElement fromCity;
+		@FindBy(xpath = "//input[@id='fromCity']")
+		WebElement fromCityMumbai;
 		
-		@FindBy(xpath = "//span[contains(text(),'To')]")
-		WebElement toCity;
-		*/
+		@FindBy(xpath = "//div[@class='hsw_autocomplePopup autoSuggestPlugin ']/div/input")
+		public WebElement enterMumbai;
+		
+		@FindBy(xpath = "//p[contains(text(),'Mumbai, India')]")
+		public WebElement selectMumbai;
+		
+		@FindBy(xpath = "//input[@id='toCity']")
+		WebElement toCityDelhi;
+		
+		@FindBy(xpath = "//div[@class='hsw_autocomplePopup autoSuggestPlugin makeFlex column spaceBetween']/div/input")
+		public WebElement enterDelhi;
+		
+		@FindBy(xpath = "//p[contains(text(),'New Delhi, India')]")
+		public WebElement selectDelhi;
+		
 	    
 	    @FindBy(xpath = "//p[contains(text(),'Flights from ')]")
 	    public WebElement verifyFlightSearch;
@@ -46,6 +57,10 @@ public class FlightsPage extends TestBase{
 	
 		
 	//Actions
+		public void mumbai_Delhi(){
+			
+		}
+		
 		public void searchFlights() throws InterruptedException{
 			
 			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
