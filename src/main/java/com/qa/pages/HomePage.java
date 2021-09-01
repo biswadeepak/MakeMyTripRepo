@@ -32,7 +32,7 @@ public class HomePage{
 	@FindBy(id = "username")
 	public WebElement mobno;
 	
-	@FindBy(xpath = "//span[contains(text(),'Continue')]")
+	@FindBy(xpath = "//button[@data-cy='continueBtn']")
 	public WebElement continueBtn;
 	
 	@FindBy(xpath = "//span[contains(text(),'Login')]")
@@ -45,8 +45,8 @@ public class HomePage{
 	@FindBy(xpath = "//li[@class='menu_Hotels']/a/span[1]")
 	public WebElement hotelsLink;
 	
-	@FindBy(xpath = "//div[@class='loginModal displayBlock modalLogin dynHeight personal ']")
-	public WebElement randomClick;
+	/*@FindBy(xpath = "//div[@class='loginModal displayBlock modalLogin dynHeight personal ']")
+	public WebElement randomClick;*/
 	
 	@FindBy(xpath = "//div[@data-cy='outsideModal']")
 	public WebElement popUpElement;
@@ -74,7 +74,7 @@ public class HomePage{
 	}
 	
 	public void clickOnContinueBtn(){
-		loginBtn.click();
+		continueBtn.click();
 		
 	}
 	
@@ -94,7 +94,7 @@ public class HomePage{
 	public FlightsPage ClickOnFilgtsPage(){
 		flightLink.click();
 		
-		return new FlightsPage();
+		return new FlightsPage(driver);
 		
 	}
 	
@@ -105,9 +105,9 @@ public class HomePage{
 		
 	}
 	
-	public void randomClick(){
+	/*public void randomClick(){
 		randomClick.click();
-	}
+	}*/
 	
 	public void LoginPopUp(){
 		

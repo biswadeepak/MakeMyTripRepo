@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.util.TestBase;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 public class HotelsPage extends TestBase{
 	
@@ -26,11 +26,12 @@ public class HotelsPage extends TestBase{
 	@FindBy(xpath = "//div[@class='hsw_autocomplePopup locus autoSuggestPlugin ']/div/input")
 	public WebElement EnterMumbai;
 	
-	@FindBy(xpath = "//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/div[1]/div[1]/div[1]/div[1]/p[1]")
+	@FindBy(xpath = "//p[contains(text(),'Mumbai, Maharashtra, India')]")
 	public WebElement selectMumbai;
 	
-	@FindBy(xpath = "//a[contains(text(),'Search')]")
+	@FindBy(xpath = "//button[@id='hsw_search_button']")
 	public WebElement searchHotels;
+	
 	
 	@FindBy(xpath = "//div[@id='seoH1DontRemoveContainer']/p[contains(text(),'Hotels, Villas, Apartments and more in Mumbai')]")
 	public WebElement verifyhotels;
@@ -57,7 +58,11 @@ public class HotelsPage extends TestBase{
 			public void SelectLocAsMumbai(){
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				EnterMumbai.sendKeys(prop.getProperty("loc"));
-				homepage.randomClick();
+				//homepage.randomClick();
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				selectMumbai.click();
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				selectLocations.click();
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				selectMumbai.click();
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -68,7 +73,8 @@ public class HotelsPage extends TestBase{
 			public void VerifyHotelListPage(){
 				
 				String atctualtxt = verifyhotels.getText();
-				Assert.assertEquals(true, atctualtxt);	
+				Assert.assertTrue("The Page is not Verified", atctualtxt.equals("Hotels, Villas, Apartments and more in Mumbai"));
+				
 			}
 			
 			

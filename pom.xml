@@ -35,7 +35,6 @@
     <groupId>info.cukes</groupId>
     <artifactId>cucumber-junit</artifactId>
     <version>1.2.5</version>
-    <scope>test</scope>
     </dependency>
     
     <dependency>
@@ -62,13 +61,20 @@
     <groupId>junit</groupId>
     <artifactId>junit</artifactId>
     <version>4.13.1</version>
-    <scope>test</scope>
     </dependency>
     
     <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
+    </dependency>
+    
+    <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit-dep</artifactId>
+    <version>4.11</version>
+    <type>pom</type>
+    <scope>test</scope>
     </dependency>
      
   </dependencies>
@@ -80,18 +86,16 @@
     
     <plugins>
     
-        <plugin>
-        <?m2e execute onCofiguration?>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.1</version>
-          <configuration>
-            <encoding>UFT-8</encoding>
-            <source>1.8</source>
-            <target>1.8</target>
-          </configuration>
+    <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
         </plugin>
-        
+    
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -117,16 +121,16 @@
               <includes>
               <!-- UNCOMMENT BELOW LINE - To execute feature files with a single runner -->
               
-              <include>**TestRunner.java</include>
+              <include>**/*TestRunner.java</include>
               
               <!-- UNCOMMENT BELOW LINE - To execute feature files with multiple runners -->>
               
-              <include>**/*Runner.java</include>
+              <!-- <include>**/*Runner.java</include>  -->
               
               </includes>
               
               <!-- UNCOMMENT BELOW 3 LINE - To execute using parallel or combination option -->
-              <parallel>methods</parallel>
+              <parallel>all</parallel>
               <threadcount>4</threadcount>
               <perCoreThreadCount>true</perCoreThreadCount>
             
@@ -134,6 +138,8 @@
           </execution>
         </executions>
       </plugin>
+        
+        
         
      </plugins>
     </pluginManagement>

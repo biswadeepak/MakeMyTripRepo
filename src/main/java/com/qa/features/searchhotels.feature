@@ -1,6 +1,6 @@
 Feature: Search Hotels in MakeMyTrip
 
-Scenario: Search a flight in MakemyTrip
+Scenario: Verify Hotels Page in MakemyTrip
 
 Given User Open Browser
 Then Click on Randoms place

@@ -1,5 +1,7 @@
 package com.qa.stepDefinations;
 
+import java.util.concurrent.TimeUnit;
+
 import com.qa.pages.FlightsPage;
 import com.qa.pages.HomePage;
 import com.qa.pages.HotelsPage;
@@ -18,13 +20,13 @@ public class HotelList extends TestBase {
 	public void user_Open_Browser() throws Throwable {
 	    TestBase.initialization();
 	    homepage = new HomePage(driver);
-	    flightspage = new FlightsPage();
+	    flightspage = new FlightsPage(driver);
 	    hotelspage = new HotelsPage();
 	}
 	
 	@Then("^Click on Randoms place$")
 	public void click_on_Randoms_place() throws Throwable {
-	    homepage.randomClick();
+	    homepage.LoginPopUp();
 	}
 	
 	@Then("^Click on Hotels Tab$")
@@ -40,6 +42,7 @@ public class HotelList extends TestBase {
 		
 		ExpliciteWait(hotelspage.selectLocations);
 		hotelspage.SelectLoc();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		hotelspage.SelectLocAsMumbai();
 	    
 	}

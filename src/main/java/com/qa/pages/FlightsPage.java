@@ -1,12 +1,26 @@
 package com.qa.pages;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.util.TestBase;
 
+
 public class FlightsPage extends TestBase{
+	
+	
+	WebDriver driver;
+
+	//Initializing Page Object
+	public FlightsPage(WebDriver driver){
+		this.driver =driver;
+		PageFactory.initElements(driver,this);
+	}
 	
 	//Page Factory-OR
 		/*@FindBy(xpath = "//span[contains(text(),'From')]")
@@ -21,26 +35,27 @@ public class FlightsPage extends TestBase{
 	    
 	    
 		@FindBy(xpath = "//a[contains(text(),'Search')]")
-		public WebElement searchFlight;
+		public WebElement searchFlightBtn;
 		
-		@FindBy(xpath = "//button[@id='bookbutton-RKEY:71e7acb0-11ab-4bbf-82f9-c9dbcbd8b891:26_0']/span[1]")
+		@FindBy(xpath = "//div[@id='premEcon']/div/div[1]/div[1]/div[2]/div[4]/div/button")
 		public WebElement PricesBtn;
 		
-		@FindBy(xpath = "//div[@class='viewFareBtnCol ']/button[@id='bookbutton-RKEY:9bea9444-c0c7-4268-8267-1a0d1c4eefbf:6_0']")
+		@FindBy(xpath = "//div[@id='premEcon']/div/div[1]/div[3]/div/div[2]/div/div[3]/button")
 		public WebElement bookNowBtn;
 		
-	//Initializing Page Object
-		public FlightsPage(){
-			PageFactory.initElements(driver,this);
-		}
+	
 		
 	//Actions
-		public void searchFlights(){
-			searchFlight.click();
+		public void searchFlights() throws InterruptedException{
+			
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			searchFlightBtn.click();
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			
 		}
 		
-		public boolean verifySearchFlightPage(){
+		public boolean verifySearchFlightPage() throws InterruptedException{
+			Thread.sleep(15000);
 			return verifyFlightSearch.isDisplayed();
 		}
 		

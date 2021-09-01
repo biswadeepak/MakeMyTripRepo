@@ -8,7 +8,7 @@ import com.qa.util.TestBase;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import junit.framework.Assert;
+import org.junit.Assert;
 
 public class Bookflight extends TestBase{
 	HomePage homepage;
@@ -18,24 +18,25 @@ public class Bookflight extends TestBase{
 	public void user_Opens_Browser() throws Throwable {
 	    TestBase.initialization();
 	    homepage = new HomePage(driver);
-	    flightspage = new FlightsPage();
+	    flightspage = new FlightsPage(driver);
 	}
 	
 	@Then("^Click on Random place$")
 	public void click_on_Random_place() throws Throwable {
-	    homepage.randomClick();
+	    homepage.LoginPopUp();
 	}
 	
 
 	@Then("^Click on Search button$")
 	public void click_on_Search_button() throws Throwable {
-		ExpliciteWait(flightspage.searchFlight);
+		
 	    flightspage.searchFlights();
 	    
 	}
 
 	@Then("^Verify Search Flights$")
 	public void verify_Search_Flights() throws Throwable {
+		ExpliciteWait(flightspage.verifyFlightSearch);
 	    boolean flag = flightspage.verifySearchFlightPage();
 	    Assert.assertTrue(flag);
 	}
