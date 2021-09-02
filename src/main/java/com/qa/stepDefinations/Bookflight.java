@@ -45,6 +45,11 @@ public class Bookflight extends TestBase{
 	    flightspage.searchFlights();
 	    
 	}
+	
+	@Then("^Click on Non Stop Checkbox$")
+	public void click_on_Non_Stop_Checkbox() throws Throwable {
+	    flightspage.CheckOnNonStop();
+	}
 
 	@Then("^Verify Search Flights$")
 	public void verify_Search_Flights() throws Throwable {
@@ -64,5 +69,7 @@ public class Bookflight extends TestBase{
 		ExpliciteWait(flightspage.bookNowBtn);
 	    flightspage.BookFlight();
 	}
+	
+	
 
 }

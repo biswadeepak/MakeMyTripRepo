@@ -1,6 +1,6 @@
 package com.qa.pages;
 
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,42 +49,52 @@ public class FlightsPage extends TestBase{
 		@FindBy(xpath = "//a[contains(text(),'Search')]")
 		public WebElement searchFlightBtn;
 		
+		@FindBy(xpath = "//span[text()='Non Stop']")
+		public WebElement nonStopFlights;
+		
 		@FindBy(xpath = "//div[@id='premEcon']/div/div[1]/div[1]/div[2]/div[4]/div/button")
 		public WebElement PricesBtn;
 		
 		@FindBy(xpath = "//div[@id='premEcon']/div/div[1]/div[3]/div/div[2]/div/div[3]/button")
 		public WebElement bookNowBtn;
-		
-	
+			
 		
 	//Actions
-		public void select_Mumbai(){
+		public void select_Mumbai() throws Exception{
 			fromCityMumbai.click();
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			//Wait();
+			Thread.sleep(3000);
 			enterMumbai.sendKeys(prop.getProperty("loc1"));
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			Wait();
 			selectMumbai.click();
 		}
 		
-		public void select_Delhi(){
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		public void select_Delhi() throws Exception{
+			//Wait();
+			Thread.sleep(5000);
 			enterDelhi.sendKeys(prop.getProperty("loc2"));
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			ExpliciteWait(selectDelhi);
 			selectDelhi.click();
 			
 		}
 		
 		public void select_Date(){
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			Wait();
 			selectDate.click();
 		}
 		
 		public void searchFlights() throws InterruptedException{
 			
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			Wait();
 			searchFlightBtn.click();
-			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			Wait();
 			
+		}
+		
+		public void CheckOnNonStop() throws InterruptedException{
+			//Wait();
+			Thread.sleep(15000);
+			nonStopFlights.click();
 		}
 		
 		
@@ -102,6 +112,12 @@ public class FlightsPage extends TestBase{
         public void BookFlight(){
 			
         	bookNowBtn.click();
+        	
+        	
 		}
+        
+       
+        
+        
 
 }

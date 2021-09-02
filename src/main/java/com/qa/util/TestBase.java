@@ -64,6 +64,10 @@ public static void initialization(){
 	WebDriverWait wait = new WebDriverWait(driver, 60);
 	wait.until(ExpectedConditions.visibilityOf(element));
 }
+    
+    public static void Wait(){
+    	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+    }
 
          
 }

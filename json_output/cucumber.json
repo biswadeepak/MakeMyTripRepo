@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 15798172100,
+              "duration": 29198868700,
               "status": "passed"
             },
             "line": 6,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 628356700,
+              "duration": 261162600,
               "status": "passed"
             },
             "line": 7,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 2097105500,
+              "duration": 4158050400,
               "status": "passed"
             },
             "line": 8,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 830331200,
+              "duration": 6007058900,
               "status": "passed"
             },
             "line": 9,
@@ -60,7 +60,7 @@
           },
           {
             "result": {
-              "duration": 149230400,
+              "duration": 156718400,
               "status": "passed"
             },
             "line": 10,
@@ -72,7 +72,7 @@
           },
           {
             "result": {
-              "duration": 32825325400,
+              "duration": 35431013600,
               "status": "passed"
             },
             "line": 11,
@@ -84,10 +84,22 @@
           },
           {
             "result": {
-              "duration": 17285998000,
+              "duration": 16599297200,
               "status": "passed"
             },
             "line": 12,
+            "name": "Click on Non Stop Checkbox",
+            "match": {
+              "location": "Bookflight.click_on_Non_Stop_Checkbox()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15188546000,
+              "status": "passed"
+            },
+            "line": 13,
             "name": "Verify Search Flights",
             "match": {
               "location": "Bookflight.verify_Search_Flights()"
@@ -96,10 +108,10 @@
           },
           {
             "result": {
-              "duration": 299446400,
+              "duration": 330372700,
               "status": "passed"
             },
-            "line": 13,
+            "line": 14,
             "name": "Click On View Price button",
             "match": {
               "location": "Bookflight.click_On_View_Price_button()"
@@ -108,10 +120,10 @@
           },
           {
             "result": {
-              "duration": 496166000,
+              "duration": 319992300,
               "status": "passed"
             },
-            "line": 14,
+            "line": 15,
             "name": "Click On Book Now button",
             "match": {
               "location": "Bookflight.click_On_Book_Now_button()"

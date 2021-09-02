@@ -52,16 +52,21 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "Verify Search Flights",
+  "name": "Click on Non Stop Checkbox",
   "keyword": "Then "
 });
 formatter.step({
   "line": 13,
-  "name": "Click On View Price button",
+  "name": "Verify Search Flights",
   "keyword": "Then "
 });
 formatter.step({
   "line": 14,
+  "name": "Click On View Price button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 15,
   "name": "Click On Book Now button",
   "keyword": "Then "
 });
@@ -69,63 +74,70 @@ formatter.match({
   "location": "Bookflight.user_Opens_Browser()"
 });
 formatter.result({
-  "duration": 15798172100,
+  "duration": 29198868700,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Random_place()"
 });
 formatter.result({
-  "duration": 628356700,
+  "duration": 261162600,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_From_Mumbai()"
 });
 formatter.result({
-  "duration": 2097105500,
+  "duration": 4158050400,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_To_Delhi()"
 });
 formatter.result({
-  "duration": 830331200,
+  "duration": 6007058900,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_the_date()"
 });
 formatter.result({
-  "duration": 149230400,
+  "duration": 156718400,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Search_button()"
 });
 formatter.result({
-  "duration": 32825325400,
+  "duration": 35431013600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Bookflight.click_on_Non_Stop_Checkbox()"
+});
+formatter.result({
+  "duration": 16599297200,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.verify_Search_Flights()"
 });
 formatter.result({
-  "duration": 17285998000,
+  "duration": 15188546000,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_View_Price_button()"
 });
 formatter.result({
-  "duration": 299446400,
+  "duration": 330372700,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_Book_Now_button()"
 });
 formatter.result({
-  "duration": 496166000,
+  "duration": 319992300,
   "status": "passed"
 });
 });
