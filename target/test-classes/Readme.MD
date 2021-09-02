@@ -17,4 +17,5 @@ c) After importing, change the locations of the drivers in the config.properties
 In order to execute the project, follow the below steps:
 a) Change the geckodriver/ chromedriver path located in config.properies
 a) Go to TestRunner.java file located under /src/test/java/TestRunner path
-b) Right click on file and Run it as 'Run As' and choose 'Run Configurations' and click on 'Run' button
+b) UnComment the tags and give the path for features as "src\\main\\java\\com\\qa\\features" 
+c) Right click on file and Run it as 'Run As' and choose 'Run Configurations' and click on 'Run' button

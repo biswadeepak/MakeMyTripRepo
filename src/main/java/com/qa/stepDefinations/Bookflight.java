@@ -24,6 +24,20 @@ public class Bookflight extends TestBase{
 	    homepage.LoginPopUp();
 	}
 	
+	@Then("^Select From Mumbai$")
+	public void select_From_Mumbai() throws Throwable {
+	    flightspage.select_Mumbai();
+	}
+	
+	@Then("^Select To Delhi$")
+	public void select_To_Delhi() throws Throwable {
+	    flightspage.select_Delhi();
+	}
+	
+	@Then("^Select the date$")
+	public void select_the_date() throws Throwable {
+	    flightspage.select_Date();
+	}
 
 	@Then("^Click on Search button$")
 	public void click_on_Search_button() throws Throwable {

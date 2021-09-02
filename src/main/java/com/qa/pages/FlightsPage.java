@@ -31,14 +31,15 @@ public class FlightsPage extends TestBase{
 		@FindBy(xpath = "//p[contains(text(),'Mumbai, India')]")
 		public WebElement selectMumbai;
 		
-		@FindBy(xpath = "//input[@id='toCity']")
-		WebElement toCityDelhi;
 		
-		@FindBy(xpath = "//div[@class='hsw_autocomplePopup autoSuggestPlugin makeFlex column spaceBetween']/div/input")
+		@FindBy(xpath = "//div[@class='hsw_autocomplePopup autoSuggestPlugin makeFlex column spaceBetween']/div/input	")
 		public WebElement enterDelhi;
 		
-		@FindBy(xpath = "//p[contains(text(),'New Delhi, India')]")
+		@FindBy(xpath = "//div[@class='calc60']/p[text()='New Delhi, India']")
 		public WebElement selectDelhi;
+		
+		@FindBy(xpath = "//p[.='3'][1]")
+		public WebElement selectDate;
 		
 	    
 	    @FindBy(xpath = "//p[contains(text(),'Flights from ')]")
@@ -57,8 +58,25 @@ public class FlightsPage extends TestBase{
 	
 		
 	//Actions
-		public void mumbai_Delhi(){
+		public void select_Mumbai(){
+			fromCityMumbai.click();
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			enterMumbai.sendKeys(prop.getProperty("loc1"));
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			selectMumbai.click();
+		}
+		
+		public void select_Delhi(){
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			enterDelhi.sendKeys(prop.getProperty("loc2"));
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			selectDelhi.click();
 			
+		}
+		
+		public void select_Date(){
+			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+			selectDate.click();
 		}
 		
 		public void searchFlights() throws InterruptedException{
@@ -68,6 +86,8 @@ public class FlightsPage extends TestBase{
 			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			
 		}
+		
+		
 		
 		public boolean verifySearchFlightPage() throws InterruptedException{
 			Thread.sleep(15000);
