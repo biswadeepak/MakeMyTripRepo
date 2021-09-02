@@ -38,7 +38,7 @@ public class FlightsPage extends TestBase{
 		@FindBy(xpath = "//div[@class='calc60']/p[text()='New Delhi, India']")
 		public WebElement selectDelhi;
 		
-		@FindBy(xpath = "//p[.='3'][1]")
+		@FindBy(xpath = "//p[.='4'][1]")
 		public WebElement selectDate;
 		
 	    

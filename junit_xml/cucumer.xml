@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="107.651081">
-<testcase classname="Search &amp; Book a flight" name="Search a flight in MakemyTrip" time="107.651081">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="100.949989">
+<testcase classname="Search &amp; Book a flight" name="Search a flight in MakemyTrip" time="100.949989">
 <system-out><![CDATA[Given User Opens Browser....................................................passed
 Then Click on Random place..................................................passed
 Then Select From Mumbai.....................................................passed

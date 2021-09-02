@@ -74,70 +74,70 @@ formatter.match({
   "location": "Bookflight.user_Opens_Browser()"
 });
 formatter.result({
-  "duration": 29198868700,
+  "duration": 17534888400,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Random_place()"
 });
 formatter.result({
-  "duration": 261162600,
+  "duration": 311078500,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_From_Mumbai()"
 });
 formatter.result({
-  "duration": 4158050400,
+  "duration": 4104588500,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_To_Delhi()"
 });
 formatter.result({
-  "duration": 6007058900,
+  "duration": 6444501500,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_the_date()"
 });
 formatter.result({
-  "duration": 156718400,
+  "duration": 146444100,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Search_button()"
 });
 formatter.result({
-  "duration": 35431013600,
+  "duration": 39780471700,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Non_Stop_Checkbox()"
 });
 formatter.result({
-  "duration": 16599297200,
+  "duration": 16658755500,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.verify_Search_Flights()"
 });
 formatter.result({
-  "duration": 15188546000,
+  "duration": 15221011800,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_View_Price_button()"
 });
 formatter.result({
-  "duration": 330372700,
+  "duration": 374720100,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_Book_Now_button()"
 });
 formatter.result({
-  "duration": 319992300,
+  "duration": 373528400,
   "status": "passed"
 });
 });
