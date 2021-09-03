@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 17534888400,
+              "duration": 25554629700,
               "status": "passed"
             },
             "line": 6,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 311078500,
+              "duration": 226591400,
               "status": "passed"
             },
             "line": 7,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 4104588500,
+              "duration": 3606959800,
               "status": "passed"
             },
             "line": 8,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 6444501500,
+              "duration": 5754262900,
               "status": "passed"
             },
             "line": 9,
@@ -60,7 +60,7 @@
           },
           {
             "result": {
-              "duration": 146444100,
+              "duration": 88615100,
               "status": "passed"
             },
             "line": 10,
@@ -72,7 +72,7 @@
           },
           {
             "result": {
-              "duration": 39780471700,
+              "duration": 30763641300,
               "status": "passed"
             },
             "line": 11,
@@ -84,7 +84,7 @@
           },
           {
             "result": {
-              "duration": 16658755500,
+              "duration": 15949402200,
               "status": "passed"
             },
             "line": 12,
@@ -96,10 +96,32 @@
           },
           {
             "result": {
-              "duration": 15221011800,
+              "duration": 1208873600,
               "status": "passed"
             },
             "line": 13,
+            "name": "Click on Mumbai 6-12 button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 16
+                },
+                {
+                  "val": "12",
+                  "offset": 18
+                }
+              ],
+              "location": "Bookflight.click_on_Mumbai_button(int,int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15243622600,
+              "status": "passed"
+            },
+            "line": 14,
             "name": "Verify Search Flights",
             "match": {
               "location": "Bookflight.verify_Search_Flights()"
@@ -108,10 +130,10 @@
           },
           {
             "result": {
-              "duration": 374720100,
+              "duration": 252171800,
               "status": "passed"
             },
-            "line": 14,
+            "line": 15,
             "name": "Click On View Price button",
             "match": {
               "location": "Bookflight.click_On_View_Price_button()"
@@ -120,13 +142,37 @@
           },
           {
             "result": {
-              "duration": 373528400,
+              "duration": 840085700,
               "status": "passed"
             },
-            "line": 15,
+            "line": 16,
             "name": "Click On Book Now button",
             "match": {
               "location": "Bookflight.click_On_Book_Now_button()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 45707413700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Enter Customer Details",
+            "match": {
+              "location": "Bookflight.enter_Customer_Details()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 20000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Verify Fare Summery",
+            "match": {
+              "location": "Bookflight.verify_Fare_Summery()"
             },
             "keyword": "Then "
           }

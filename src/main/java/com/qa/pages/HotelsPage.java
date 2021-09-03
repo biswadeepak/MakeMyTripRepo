@@ -57,7 +57,7 @@ public class HotelsPage extends TestBase{
 			
 			public void SelectLocAsMumbai(){
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				EnterMumbai.sendKeys(prop.getProperty("loc"));
+				EnterMumbai.sendKeys(prop.getProperty("loc1"));
 				//homepage.randomClick();
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				selectMumbai.click();

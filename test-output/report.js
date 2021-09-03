@@ -57,87 +57,133 @@ formatter.step({
 });
 formatter.step({
   "line": 13,
-  "name": "Verify Search Flights",
+  "name": "Click on Mumbai 6-12 button",
   "keyword": "Then "
 });
 formatter.step({
   "line": 14,
-  "name": "Click On View Price button",
+  "name": "Verify Search Flights",
   "keyword": "Then "
 });
 formatter.step({
   "line": 15,
+  "name": "Click On View Price button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
   "name": "Click On Book Now button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 17,
+  "name": "Enter Customer Details",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 18,
+  "name": "Verify Fare Summery",
   "keyword": "Then "
 });
 formatter.match({
   "location": "Bookflight.user_Opens_Browser()"
 });
 formatter.result({
-  "duration": 17534888400,
+  "duration": 25554629700,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Random_place()"
 });
 formatter.result({
-  "duration": 311078500,
+  "duration": 226591400,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_From_Mumbai()"
 });
 formatter.result({
-  "duration": 4104588500,
+  "duration": 3606959800,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_To_Delhi()"
 });
 formatter.result({
-  "duration": 6444501500,
+  "duration": 5754262900,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_the_date()"
 });
 formatter.result({
-  "duration": 146444100,
+  "duration": 88615100,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Search_button()"
 });
 formatter.result({
-  "duration": 39780471700,
+  "duration": 30763641300,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Non_Stop_Checkbox()"
 });
 formatter.result({
-  "duration": 16658755500,
+  "duration": 15949402200,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "6",
+      "offset": 16
+    },
+    {
+      "val": "12",
+      "offset": 18
+    }
+  ],
+  "location": "Bookflight.click_on_Mumbai_button(int,int)"
+});
+formatter.result({
+  "duration": 1208873600,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.verify_Search_Flights()"
 });
 formatter.result({
-  "duration": 15221011800,
+  "duration": 15243622600,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_View_Price_button()"
 });
 formatter.result({
-  "duration": 374720100,
+  "duration": 252171800,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_Book_Now_button()"
 });
 formatter.result({
-  "duration": 373528400,
+  "duration": 840085700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Bookflight.enter_Customer_Details()"
+});
+formatter.result({
+  "duration": 45707413700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Bookflight.verify_Fare_Summery()"
+});
+formatter.result({
+  "duration": 20000,
   "status": "passed"
 });
 });

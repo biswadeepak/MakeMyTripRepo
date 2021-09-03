@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -65,8 +66,20 @@ public static void initialization(){
 	wait.until(ExpectedConditions.visibilityOf(element));
 }
     
+    public static void click(WebElement element){
+    	WebDriverWait wait = new WebDriverWait(driver, 60);
+    	wait.until(ExpectedConditions.elementToBeClickable(element)).click();;
+    }
+    
+    
     public static void Wait(){
     	driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+    }
+    
+    public static void ScrollPage() throws Exception{
+    	
+    	JavascriptExecutor sc = (JavascriptExecutor) driver;
+		sc.executeScript("window.scrollBy(0,2000)", "");
     }
 
          

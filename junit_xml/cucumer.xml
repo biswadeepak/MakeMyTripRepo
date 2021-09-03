@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="100.949989">
-<testcase classname="Search &amp; Book a flight" name="Search a flight in MakemyTrip" time="100.949989">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="145.19629">
+<testcase classname="Search &amp; Book a flight" name="Search a flight in MakemyTrip" time="145.19629">
 <system-out><![CDATA[Given User Opens Browser....................................................passed
 Then Click on Random place..................................................passed
 Then Select From Mumbai.....................................................passed
@@ -8,9 +8,12 @@ Then Select To Delhi........................................................pass
 Then Select the date........................................................passed
 Then Click on Search button.................................................passed
 Then Click on Non Stop Checkbox.............................................passed
+Then Click on Mumbai 6-12 button............................................passed
 Then Verify Search Flights..................................................passed
 Then Click On View Price button.............................................passed
 Then Click On Book Now button...............................................passed
+Then Enter Customer Details.................................................passed
+Then Verify Fare Summery....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

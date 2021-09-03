@@ -50,6 +50,14 @@ public class Bookflight extends TestBase{
 	public void click_on_Non_Stop_Checkbox() throws Throwable {
 	    flightspage.CheckOnNonStop();
 	}
+	
+	@Then("^Click on Mumbai (\\d+)-(\\d+) button$")
+	public void click_on_Mumbai_button(int arg1, int arg2) throws Throwable {
+		
+		flightspage.Mumbai6_12();
+	}
+	
+	    
 
 	@Then("^Verify Search Flights$")
 	public void verify_Search_Flights() throws Throwable {
@@ -70,6 +78,15 @@ public class Bookflight extends TestBase{
 	    flightspage.BookFlight();
 	}
 	
+	@Then("^Enter Customer Details$")
+	public void enter_Customer_Details() throws Throwable {
+		
+	    flightspage.CustomerDetails();
+	}
 	
-
+	@Then("^Verify Fare Summery$")
+	public void verify_Fare_Summery() throws Throwable {
+	    
+	}
+	
 }
