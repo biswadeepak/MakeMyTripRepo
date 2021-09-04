@@ -10,6 +10,19 @@ import com.qa.util.TestBase;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
+
+/*
+ * 
+ * 
+ * Here User needs to Select From Mumbai to Delhi as Location
+ * Then Use tomorrow date and Search for the flight
+ * Click on Non-Stop check box and 6AM-12PM for mumbai
+ * Then User Click on View Prices button and Book Now button for the lowest Price flight 
+ * User should enter the customer details
+ * Then Click on Continue button and verify the price details 
+ * 
+ * 
+ * */
 public class HotelList extends TestBase {
 	
 	HomePage homepage;
@@ -53,5 +66,11 @@ public class HotelList extends TestBase {
 	    hotelspage.VerifyHotelListPage();
 	}
 	
+	
+	@Then("^Close the search hotels Browser$")
+	public void close_the_search_hotels_Browser() throws Throwable {
+	    CloseBrowser();
+	}
+
 
 }

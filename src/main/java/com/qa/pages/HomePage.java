@@ -49,40 +49,13 @@ public class HomePage{
 	
 	//Actions
 	
-	public 	void loginorCreateAccountBtn() {
-		
-		try{
-			Thread.sleep(3000);
-		}
-		catch(Exception e){
-			
-		}
-		
-		loginLink.click();
-		
-	}
-	
-	public void entermobilenumber(String mob){
-		mobno.sendKeys(mob);
-	}
-	
-	public void clickOnContinueBtn(){
-		continueBtn.click();
-		
-	}
-	
-	public void wait_30_Second()throws InterruptedException{
-		Thread.sleep(30000);
-	}
-	
-	public void clickOnLoginBtn(){
-		loginBtn.click();	
-	}
-	
-	
-	public 	String validateHomePageTitle(){
-		return driver.getTitle();
-	}
+	/*
+	 * 
+	 * Here to Click on Search button for flight Search
+	 * 
+	 * 
+	 * 
+	 * */
 	
 	public FlightsPage ClickOnFilgtsPage(){
 		flightLink.click();
@@ -91,6 +64,15 @@ public class HomePage{
 		
 	}
 	
+	
+	/*
+	 * 
+	 * 
+	 * Here to Verify Hotels Page
+	 * 
+	 * 
+	 * */
+	
 	public HotelsPage verifyHotelsPage(){
 		hotelsLink.click();
 		
@@ -98,9 +80,13 @@ public class HomePage{
 		
 	}
 	
-	/*public void randomClick(){
-		randomClick.click();
-	}*/
+	/*
+	 * 
+	 * 
+	 * Here to click randomly to close hidden Modal
+	 * 
+	 * 
+	 * */ 
 	
 	public void LoginPopUp(){
 		

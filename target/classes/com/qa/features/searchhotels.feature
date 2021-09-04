@@ -4,7 +4,8 @@ Feature: Search Hotels in MakeMyTrip
 Scenario: Verify Hotels Page in MakemyTrip
 
 Given User Open Browser
-Then Click on Randoms place
+When Click on Randoms place
 Then Click on Hotels Tab
-Then Select Mumbai from drop down
+And Select Mumbai from drop down
 Then Verify the Hotels Page
+And Close the search hotels Browser

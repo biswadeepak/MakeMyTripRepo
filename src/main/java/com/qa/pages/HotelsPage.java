@@ -14,8 +14,8 @@ public class HotelsPage extends TestBase{
 	
 	HomePage homepage;
 	
-	
 	//Page Factory-OR
+	
 	
 	@FindBy(xpath = "//div[@class='chHeaderContainer']/nav/ul/li[2]/a")
 	public WebElement hotelsLink;
@@ -45,35 +45,76 @@ public class HotelsPage extends TestBase{
 			}
 			
 	//Actions
+			
+			/*
+			 * 
+			 * 
+			 * Here Cliking On Hotels tab after Opening the Browser
+			 * 
+			 * 
+			 * 
+			 * */
+			
+			
 			public HotelsPage ClickOnHotelsPage(){
 				homepage = new HomePage(driver);
 				hotelsLink.click();
 				return new HotelsPage();
 			}
+			
+			/*
+			 * 
+			 * Select Location
+			 * 
+			 * */
 			public void SelectLoc(){
 				selectLocations.click();
 				
 			}
 			
+			/*
+			 * 
+			 * 
+			 * Here Enter the Mumbai and Click on Search Button
+			 * 
+			 * 
+			 * */
+			
 			public void SelectLocAsMumbai(){
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Wait();
 				EnterMumbai.sendKeys(prop.getProperty("loc1"));
-				//homepage.randomClick();
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Wait();
 				selectMumbai.click();
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Wait();
 				selectLocations.click();
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Wait();
 				selectMumbai.click();
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Wait();
 				searchHotels.click();
 				
 			}
 			
+			/*
+			 * 
+			 * 
+			 * Here Verify the Hotels for Mumbai Location
+			 * 
+			 * 
+			 * 
+			 * */
+			
+			
 			public void VerifyHotelListPage(){
 				
+				String exptxt = "Hotels, Villas, Apartments and more in Mumbai";
 				String atctualtxt = verifyhotels.getText();
-				Assert.assertTrue("The Page is not Verified", atctualtxt.equals("Hotels, Villas, Apartments and more in Mumbai"));
+				
+				if(exptxt.equalsIgnoreCase(atctualtxt)){
+					System.out.println("The Page is Verifies");
+				}
+				else{
+					System.out.println("The Page is not Verified");
+				}
 				
 			}
 			

@@ -7,8 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-     features = "src\\main\\java\\com\\qa\\features\\bookflight.feature",//The path of the feature file
-     //tags = "@Flight,@Searchhotel" ,
+     features = "src\\main\\java\\com\\qa\\features",//The path of the feature file
      glue = {"com.qa.stepDefinations"}, //The path of the step definition file
      format= {"pretty","html:test-output","json:json_output/cucumber.json", "junit:junit_xml/cucumer.xml"}, //To generate different type of reporting
      monochrome = true, //display the console output in proper readable format

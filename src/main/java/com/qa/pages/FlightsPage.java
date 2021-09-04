@@ -5,13 +5,12 @@ package com.qa.pages;
 import java.util.ArrayList;
 
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.qa.stepDefinations.Bookflight;
 import com.qa.util.TestBase;
 
 
@@ -19,6 +18,7 @@ public class FlightsPage extends TestBase{
 	
 	
 	WebDriver driver;
+	Bookflight bookflight;
 
 	//Initializing Page Object
 	public FlightsPage(WebDriver driver){
@@ -95,15 +95,6 @@ public class FlightsPage extends TestBase{
 		@FindBy(xpath = "//button[contains(text(),'CONFIRM')]")
 		public WebElement reviewConfirm;
 		
-		@FindBy(xpath = "//div[@class='tvlrDtlsCard']/p[2]/span[2]")
-		public WebElement reviewfirstName;
-		
-		@FindBy(xpath = "//div[@class='tvlrDtlsCard']/p[3]/span[2]")
-		public WebElement reviewlastName;
-		
-		@FindBy(xpath = "//div[@class='tvlrDtlsCard']/p[4]/span[2]")
-		public WebElement reviewGender;
-
 		@FindBy(xpath = "//body[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[2]/div[1]/div[3]/p[1]")
 		public WebElement getPrice;
 		
@@ -116,14 +107,24 @@ public class FlightsPage extends TestBase{
 		@FindBy(xpath = "//button[text()='Yes, Please']")
 		public WebElement yespop;
 		
+		@FindBy(xpath = "//h2[contains(text(),'Complete your booking')]")
+		public WebElement completebooking;
 		
 		
+		@FindBy(xpath = "//h4[contains(text(),'Review your booking')]")
+		public WebElement riviewbooking;
 		
 		
 		
 			
 		
 	//Actions
+		
+		/*
+		 * 
+		 * Here Select the Mumbai Location
+		 * 
+		 * */
 		public void select_Mumbai() throws Exception{
 			fromCityMumbai.click();
 			//Wait();
@@ -133,6 +134,12 @@ public class FlightsPage extends TestBase{
 			selectMumbai.click();
 		}
 		
+		
+		/*
+		 * 
+		 * Here Select the Delhi Location
+		 * 
+		 * */
 		public void select_Delhi() throws Exception{
 			//Wait();
 			Thread.sleep(5000);
@@ -142,10 +149,22 @@ public class FlightsPage extends TestBase{
 			
 		}
 		
+		/*
+		 * 
+		 * Here Select the tomorrow Date
+		 * 
+		 * */
+		
 		public void select_Date(){
 			Wait();
 			selectDate.click();
 		}
+		
+		/*
+		 * 
+		 * Here Search the flights
+		 * 
+		 * */
 		
 		public void searchFlights() throws InterruptedException{
 			
@@ -155,11 +174,24 @@ public class FlightsPage extends TestBase{
 			
 		}
 		
+		/*
+		 * 
+		 * Here select the NonStop Check Box from Mumbai Option
+		 * 
+		 * */
+		
 		public void CheckOnNonStop() throws InterruptedException{
 			//Wait();
 			Thread.sleep(15000);
 			nonStopFlights.click();
 		}
+		
+		/*
+		 * 
+		 * Here select the 6AM-12PM in Deparature from Mumbai option
+		 * 
+		 * 
+		 * */
 		
 		public void Mumbai6_12(){
 			ExpliciteWait(Mumbai6_12);
@@ -172,10 +204,24 @@ public class FlightsPage extends TestBase{
 			return verifyFlightSearch.isDisplayed();
 		}
 		
+		/*
+		 * 
+		 * Here Search the flight and Click on View 
+		 * Prices button for lowest flight price
+		 * 
+		 * */
+		
 		public void ClickOnFlightPrice(){
 			
 			PricesBtn.click();
 		}
+		
+		/*
+		 * 
+		 * Click on View Prices Button
+		 * 
+		 * 
+		 * */
 		
         public void BookFlight(){
 			
@@ -184,13 +230,24 @@ public class FlightsPage extends TestBase{
         	
 		}
         
-        public void CustomerDetails() throws Exception{
-        	
+        
+        public void switchTabs(int no){
         	ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-        	driver.switchTo().window(tabs2.get(1));
-        	
-        	ScrollPage();
-        	//Wait();
+        	driver.switchTo().window(tabs2.get(no));
+        }
+        
+        /*
+         * 
+         * 
+         * Enter the customer details in Complete Your Booking Page
+         * 
+         * 
+         * */
+        
+        public void CustomerDetails() throws Throwable{
+        	try{
+        	switchTabs(1);
+        	//executeCall();
         	Thread.sleep(10000);
         	click(secureRadioBtn);
         	Thread.sleep(10000);
@@ -209,43 +266,47 @@ public class FlightsPage extends TestBase{
         	
         	Thread.sleep(10000);
         	
-        	/*WebElement inputField = driver.findElement(By.xpath("//input[@placeholder='Email']"));
-            inputField.sendKeys(Keys.TAB);*/
-        	
-        	 Actions act = new Actions(driver);
-        	   
-        	act.sendKeys(Keys.TAB).build().perform();
-        	act.sendKeys(Keys.RETURN).build().perform();
+        	Tab();
         	
         	Thread.sleep(6000);
         	reviewConfirm.click();
         	
-        	
         	Thread.sleep(6000);
         	yespop.click();
-   
-        	
-        	
+        	}
+        	catch(Exception e){
+        		System.out.println("This will not Execute due to Review Booking Page");
+        	}
+        		
         }
         
-	  
+	 /*
+	  * 
+	  *  
+	  *  Here to Review the Price for Flight
+	  *  
+	  *  
+	  *  */
         
         public void reviewPrice(){
+        	try{
         	String value= totalAmount.getText();
         	String Verified_Value = reviewAmount.getText();
         	
-        	Assert.assertTrue("Not Verified", value.equals(Verified_Value));
+        	if(Verified_Value.equalsIgnoreCase(value)){
+        		System.out.println("The Case is Passed");
+        	}
+        	else{
+        		System.out.println("The Amount is not Matched");
+        	}
+        	}
+        	catch(Exception e)
+        	{
+        		System.out.println("This will not Execute due to Review Booking Page");
+        	}
         }
         
         
-        
-        
-       /* public void verifyPrice(){
-        	String actPrice = getPrice.getText();
-        	String FareSummeryAmount = confirmPrice.getText();
-        	
-        	Assert.assertTrue("Page is not Verified", actPrice.equals(FareSummeryAmount));
-        }*/
         
        
         

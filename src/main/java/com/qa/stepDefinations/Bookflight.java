@@ -4,9 +4,27 @@ import com.qa.pages.FlightsPage;
 import com.qa.pages.HomePage;
 import com.qa.util.TestBase;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
 import org.junit.Assert;
+
+
+/*
+ * 
+ * In this Page User has to
+ * 1. Open MakeMyTrip in Browser
+ * 2. Select Location From Mumbai
+ * 3. Select Location To Delhi
+ * 4. Select the tomorrow Date and Search
+ * 5. Then Check Non Stop check Box and Click on Mumbai 6AM-12PM button 
+ * 6. Book the flight which price is low
+ * 7. Then Enter Customer deatils and verify Fare summery 
+ * 
+ * */ 
+
 
 public class Bookflight extends TestBase{
 	HomePage homepage;
@@ -19,7 +37,7 @@ public class Bookflight extends TestBase{
 	    flightspage = new FlightsPage(driver);
 	}
 	
-	@Then("^Click on Random place$")
+	@When("^Click on Random place$")
 	public void click_on_Random_place() throws Throwable {
 	    homepage.LoginPopUp();
 	}
@@ -29,7 +47,7 @@ public class Bookflight extends TestBase{
 	    flightspage.select_Mumbai();
 	}
 	
-	@Then("^Select To Delhi$")
+	@And("^Select To Delhi$")
 	public void select_To_Delhi() throws Throwable {
 	    flightspage.select_Delhi();
 	}
@@ -39,7 +57,7 @@ public class Bookflight extends TestBase{
 	    flightspage.select_Date();
 	}
 
-	@Then("^Click on Search button$")
+	@And("^Click on Search button$")
 	public void click_on_Search_button() throws Throwable {
 		
 	    flightspage.searchFlights();
@@ -51,7 +69,7 @@ public class Bookflight extends TestBase{
 	    flightspage.CheckOnNonStop();
 	}
 	
-	@Then("^Click on Mumbai (\\d+)-(\\d+) button$")
+	@And("^Click on Mumbai (\\d+)-(\\d+) button$")
 	public void click_on_Mumbai_button(int arg1, int arg2) throws Throwable {
 		
 		flightspage.Mumbai6_12();
@@ -59,7 +77,7 @@ public class Bookflight extends TestBase{
 	
 	    
 
-	@Then("^Verify Search Flights$")
+	@And("^Verify Search Flights$")
 	public void verify_Search_Flights() throws Throwable {
 		ExpliciteWait(flightspage.verifyFlightSearch);
 	    boolean flag = flightspage.verifySearchFlightPage();
@@ -72,7 +90,7 @@ public class Bookflight extends TestBase{
 	    flightspage.ClickOnFlightPrice();
 	}
 
-	@Then("^Click On Book Now button$")
+	@And("^Click On Book Now button$")
 	public void click_On_Book_Now_button() throws Throwable {
 		ExpliciteWait(flightspage.bookNowBtn);
 	    flightspage.BookFlight();
@@ -80,13 +98,18 @@ public class Bookflight extends TestBase{
 	
 	@Then("^Enter Customer Details$")
 	public void enter_Customer_Details() throws Throwable {
+			flightspage.CustomerDetails();
 		
-	    flightspage.CustomerDetails();
 	}
 	
-	@Then("^Verify Fare Summery$")
+	@And("^Verify Fare Summery$")
 	public void verify_Fare_Summery() throws Throwable {
-	    
+	    	flightspage.reviewPrice();
+	    }
+	
+	@Then("^Close the book flight Browser$")
+	public void close_the_book_flight_Browser() throws Throwable {
+	    CloseAllBrowser();
 	}
 	
 }
