@@ -1,14 +1,15 @@
 package com.qa.pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.qa.util.TestBase;
 
-import org.junit.Assert;
+/**
+ * This class is to define all the locators used in the hotels page
+ *
+ */
+
 
 public class HotelsPage extends TestBase{
 	
@@ -94,33 +95,5 @@ public class HotelsPage extends TestBase{
 				
 			}
 			
-			/*
-			 * 
-			 * 
-			 * Here Verify the Hotels for Mumbai Location
-			 * 
-			 * 
-			 * 
-			 * */
-			
-			
-			public void VerifyHotelListPage(){
 				
-				String exptxt = "Hotels, Villas, Apartments and more in Mumbai";
-				String atctualtxt = verifyhotels.getText();
-				
-				if(exptxt.equalsIgnoreCase(atctualtxt)){
-					System.out.println("The Page is Verifies");
-				}
-				else{
-					System.out.println("The Page is not Verified");
-				}
-				
-			}
-			
-			
-			
-			
-			
-		
 }

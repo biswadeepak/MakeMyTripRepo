@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("bookflight.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/main/java/com/qa/features/BookFlight.feature");
 formatter.feature({
   "line": 1,
   "name": "Search \u0026 Book a flight",
@@ -15,122 +15,122 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 5,
+  "line": 4,
   "name": "User Opens Browser",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
+  "line": 5,
   "name": "Click on Random place",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
+  "line": 6,
   "name": "Select From Mumbai",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.step({
-  "line": 8,
+  "line": 7,
   "name": "Select To Delhi",
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
+  "line": 8,
   "name": "Select the date",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.step({
-  "line": 10,
+  "line": 9,
   "name": "Click on Search button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
+  "line": 10,
   "name": "Click on Non Stop Checkbox",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.step({
-  "line": 12,
+  "line": 11,
   "name": "Click on Mumbai 6-12 button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 12,
   "name": "Verify Search Flights",
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
+  "line": 13,
   "name": "Click On View Price button",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 14,
   "name": "Click On Book Now button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 16,
+  "line": 15,
   "name": "Enter Customer Details",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "Verify Fare Summery",
   "keyword": "Then "
 });
 formatter.step({
   "line": 17,
-  "name": "Verify Fare Summery",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 18,
   "name": "Close the book flight Browser",
-  "keyword": "Then "
+  "keyword": "And "
 });
 formatter.match({
   "location": "Bookflight.user_Opens_Browser()"
 });
 formatter.result({
-  "duration": 36794310900,
+  "duration": 17536979800,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Random_place()"
 });
 formatter.result({
-  "duration": 433892000,
+  "duration": 165387800,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_From_Mumbai()"
 });
 formatter.result({
-  "duration": 9912741400,
+  "duration": 2712822800,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_To_Delhi()"
 });
 formatter.result({
-  "duration": 5723621500,
+  "duration": 868679400,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.select_the_date()"
 });
 formatter.result({
-  "duration": 281831400,
+  "duration": 169720400,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Search_button()"
 });
 formatter.result({
-  "duration": 37005692700,
+  "duration": 31432389600,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_on_Non_Stop_Checkbox()"
 });
 formatter.result({
-  "duration": 16376788900,
+  "duration": 1544211100,
   "status": "passed"
 });
 formatter.match({
@@ -147,143 +147,49 @@ formatter.match({
   "location": "Bookflight.click_on_Mumbai_button(int,int)"
 });
 formatter.result({
-  "duration": 1353931400,
+  "duration": 1052007600,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.verify_Search_Flights()"
 });
 formatter.result({
-  "duration": 15316640400,
+  "duration": 185724500,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_View_Price_button()"
 });
 formatter.result({
-  "duration": 1111288100,
+  "duration": 188225200,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.click_On_Book_Now_button()"
 });
 formatter.result({
-  "duration": 472195400,
+  "duration": 803707200,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.enter_Customer_Details()"
 });
 formatter.result({
-  "duration": 46663387600,
+  "duration": 17591573400,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.verify_Fare_Summery()"
 });
 formatter.result({
-  "duration": 211641900,
+  "duration": 60105500,
   "status": "passed"
 });
 formatter.match({
   "location": "Bookflight.close_the_book_flight_Browser()"
 });
 formatter.result({
-  "duration": 6147095900,
-  "status": "passed"
-});
-formatter.uri("searchhotels.feature");
-formatter.feature({
-  "line": 1,
-  "name": "Search Hotels in MakeMyTrip",
-  "description": "",
-  "id": "search-hotels-in-makemytrip",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 4,
-  "name": "Verify Hotels Page in MakemyTrip",
-  "description": "",
-  "id": "search-hotels-in-makemytrip;verify-hotels-page-in-makemytrip",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 3,
-      "name": "@Searchhotel"
-    }
-  ]
-});
-formatter.step({
-  "line": 6,
-  "name": "User Open Browser",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "Click on Randoms place",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 8,
-  "name": "Click on Hotels Tab",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 9,
-  "name": "Select Mumbai from drop down",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "Verify the Hotels Page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "Close the search hotels Browser",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "HotelList.user_Open_Browser()"
-});
-formatter.result({
-  "duration": 39391571900,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HotelList.click_on_Randoms_place()"
-});
-formatter.result({
-  "duration": 301892700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HotelList.click_on_Hotels_Tab()"
-});
-formatter.result({
-  "duration": 365771300,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HotelList.select_Mumbai_from_drop_down()"
-});
-formatter.result({
-  "duration": 5041497100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HotelList.verify_the_Hotels_Page()"
-});
-formatter.result({
-  "duration": 380458200,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HotelList.close_the_search_hotels_Browser()"
-});
-formatter.result({
-  "duration": 2837348000,
+  "duration": 1595045400,
   "status": "passed"
 });
 });
