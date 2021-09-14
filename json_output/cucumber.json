@@ -3,198 +3,98 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "Search a flight in MakemyTrip",
+        "line": 4,
+        "name": "Verify Hotels Page in MakemyTrip",
         "description": "",
-        "id": "search-\u0026-book-a-flight;search-a-flight-in-makemytrip",
+        "id": "search-hotels-in-makemytrip;verify-hotels-page-in-makemytrip",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 17536979800,
+              "duration": 9827663200,
               "status": "passed"
             },
-            "line": 4,
-            "name": "User Opens Browser",
+            "line": 5,
+            "name": "User Open Browser",
             "match": {
-              "location": "Bookflight.user_Opens_Browser()"
+              "location": "HotelList.user_Open_Browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 165387800,
+              "duration": 265703200,
               "status": "passed"
             },
-            "line": 5,
-            "name": "Click on Random place",
+            "line": 6,
+            "name": "Click on Randoms place",
             "match": {
-              "location": "Bookflight.click_on_Random_place()"
+              "location": "HotelList.click_on_Randoms_place()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2712822800,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "Select From Mumbai",
-            "match": {
-              "location": "Bookflight.select_From_Mumbai()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 868679400,
+              "duration": 457706700,
               "status": "passed"
             },
             "line": 7,
-            "name": "Select To Delhi",
+            "name": "Click on Hotels Tab",
             "match": {
-              "location": "Bookflight.select_To_Delhi()"
+              "location": "HotelList.click_on_Hotels_Tab()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 169720400,
+              "duration": 10181612500,
               "status": "passed"
             },
             "line": 8,
-            "name": "Select the date",
+            "name": "Select Mumbai from drop down",
             "match": {
-              "location": "Bookflight.select_the_date()"
+              "location": "HotelList.select_Mumbai_from_drop_down()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 31432389600,
+              "duration": 108254600,
               "status": "passed"
             },
             "line": 9,
-            "name": "Click on Search button",
+            "name": "Verify the Hotels Page",
             "match": {
-              "location": "Bookflight.click_on_Search_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1544211100,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "Click on Non Stop Checkbox",
-            "match": {
-              "location": "Bookflight.click_on_Non_Stop_Checkbox()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1052007600,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "Click on Mumbai 6-12 button",
-            "match": {
-              "arguments": [
-                {
-                  "val": "6",
-                  "offset": 16
-                },
-                {
-                  "val": "12",
-                  "offset": 18
-                }
-              ],
-              "location": "Bookflight.click_on_Mumbai_button(int,int)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 185724500,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "Verify Search Flights",
-            "match": {
-              "location": "Bookflight.verify_Search_Flights()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 188225200,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "Click On View Price button",
-            "match": {
-              "location": "Bookflight.click_On_View_Price_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 803707200,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "Click On Book Now button",
-            "match": {
-              "location": "Bookflight.click_On_Book_Now_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 17591573400,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "Enter Customer Details",
-            "match": {
-              "location": "Bookflight.enter_Customer_Details()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 60105500,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "Verify Fare Summery",
-            "match": {
-              "location": "Bookflight.verify_Fare_Summery()"
+              "location": "HotelList.verify_the_Hotels_Page()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1595045400,
+              "duration": 836839800,
               "status": "passed"
             },
-            "line": 17,
-            "name": "Close the book flight Browser",
+            "line": 10,
+            "name": "Close the search hotels Browser",
             "match": {
-              "location": "Bookflight.close_the_book_flight_Browser()"
+              "location": "HotelList.close_the_search_hotels_Browser()"
             },
             "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Searchhotel"
           }
         ]
       }
     ],
-    "name": "Search \u0026 Book a flight",
+    "name": "Search Hotels in MakeMyTrip",
     "description": "",
-    "id": "search-\u0026-book-a-flight",
+    "id": "search-hotels-in-makemytrip",
     "keyword": "Feature",
-    "uri": "src/main/java/com/qa/features/BookFlight.feature"
+    "uri": "src/main/java/com/qa/features/SearchHotels.feature"
   }
 ]

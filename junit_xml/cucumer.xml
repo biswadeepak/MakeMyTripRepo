@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="75.90658">
-<testcase classname="Search &amp; Book a flight" name="Search a flight in MakemyTrip" time="75.90658">
-<system-out><![CDATA[Given User Opens Browser....................................................passed
-When Click on Random place..................................................passed
-And Select From Mumbai......................................................passed
-And Select To Delhi.........................................................passed
-And Select the date.........................................................passed
-And Click on Search button..................................................passed
-And Click on Non Stop Checkbox..............................................passed
-And Click on Mumbai 6-12 button.............................................passed
-And Verify Search Flights...................................................passed
-And Click On View Price button..............................................passed
-And Click On Book Now button................................................passed
-And Enter Customer Details..................................................passed
-Then Verify Fare Summery....................................................passed
-And Close the book flight Browser...........................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="21.67778">
+<testcase classname="Search Hotels in MakeMyTrip" name="Verify Hotels Page in MakemyTrip" time="21.67778">
+<system-out><![CDATA[Given User Open Browser.....................................................passed
+When Click on Randoms place.................................................passed
+And Click on Hotels Tab.....................................................passed
+And Select Mumbai from drop down............................................passed
+Then Verify the Hotels Page.................................................passed
+And Close the search hotels Browser.........................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
